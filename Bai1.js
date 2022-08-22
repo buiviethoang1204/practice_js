@@ -1,6 +1,4 @@
-var User = {
-
-}
+const User = {};
 User.name = "Hoang";
 User.surname = "Viet";
 User.name = "Bui";

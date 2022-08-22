@@ -1,7 +1,12 @@
 function filterRangeInPlace(arr, a, b) {
-    if (arr.indexOf(a) < arr.indexOf(b)) {
-        console.log(arr.slice(arr.indexOf(a), arr.indexOf(b)+1));
+    for (let i = 0; i < arr.length; i++) {
+        let item = arr[i];
+        if (item < a || item > b) {
+            arr.splice(i, 1);
+            i--;
+        }
     }
 }
-
-filterRangeInPlace([3,4,6,2,1,5], 4, 5);
+arr = [3, 4, 6, 2, 1, 5];
+filterRangeInPlace(arr, 0, 3);
+console.log(arr);
