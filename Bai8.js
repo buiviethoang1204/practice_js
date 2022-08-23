@@ -7,12 +7,9 @@ let initArray = [
     { name: "Hoang2", age: 18 }
 ]
 function getAverageAge(arr) {
-    let total = arr.reduce((output, item) => {
-        if ("age" in item) {
-            x = output + item.age;
-        }
-        return x;
+    return arr.reduce((acc, curr) => {
+        return (curr.age) ? acc + curr.age : acc;
     }, 0)
-    return total;
 }
 console.log(getAverageAge(initArray));
+console.log(typeof initArray[3].age);

@@ -8,10 +8,7 @@ let initArray = [
 ]
 function nameArr(arr) {
     return arr.reduce((output, item) => {
-        if ("name" in item) {
-            x = output.concat(item.name);
-        }
-        return x;
+        return (item.name) ? output.concat(item.name) : output;
     }, [])
 }
 console.log(nameArr(initArray));
