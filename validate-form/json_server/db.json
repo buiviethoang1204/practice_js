@@ -1,0 +1,42 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "fullname": "Viet Hoang",
+      "email": "viethoang@gmail.com",
+      "password": 123123,
+      "password_confirmation": 123123
+    },
+    {
+      "fullname": "aaa",
+      "email": "aaa@gmail.com",
+      "password": "111111",
+      "password_confirmation": "111111",
+      "id": 2
+    },
+    {
+      "fullname": "Bùi Việt Hoàng",
+      "email": "buiviethoang120498@gmail.com",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "fullname": "bbb",
+      "email": "bbb@gmail.com",
+      "password": "123123",
+      "password_confirmation": "123123",
+      "id": 5
+    },
+    {
+      "fullname": "aloalo",
+      "email": "alo@gmail.com",
+      "password": "123123",
+      "password_confirmation": "123123",
+      "id": 6
+    }
+  ]
+}
