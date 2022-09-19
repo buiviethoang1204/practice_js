@@ -30,6 +30,17 @@
     flex-direction: column;
     margin-bottom: 16px;
 }
+.form-group .show-password {
+    position: absolute;
+    cursor: pointer;
+    transform: translateY(200%) translateX(1600%);
+}
+.form-group input:valid ~ span {
+    display: block;
+}
+.form-group span i.hide-btn::before{
+    content: "\f070";
+}
 .form-label, .form-message {
     text-align: left;
 }
