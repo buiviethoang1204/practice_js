@@ -1,12 +1,16 @@
 function Validator(options) {
     const selectorRules = {};
     function validate(inputElement, rule) {
+        const btnSubmit = document.querySelector('.form-submit');
         let errorMessage;
         const errorElement = inputElement.parentElement.querySelector(options.errorSelector);
         const rules = selectorRules[rule.selector];
         for (let i = 0; i < rules.length; ++i) {
             errorMessage = rules[i](inputElement.value);
-            if (errorMessage) break;
+            if (errorMessage) {
+                btnSubmit.classList.add('disabled');
+                break;
+            }
         }
         if (errorMessage) {
             errorElement.innerText = errorMessage;
@@ -14,6 +18,7 @@ function Validator(options) {
         } else {
             errorElement.innerText = '';
             errorElement.classList.remove('error');
+            btnSubmit.classList.remove('disabled');
         }
         return !errorMessage;
     }
@@ -41,7 +46,6 @@ function Validator(options) {
                 }
             } else {
                 console.log("Có lỗi");
-
             }
         }
         options.rules.forEach(rule => {
@@ -66,13 +70,14 @@ function Validator(options) {
 }
 
 function showPassword(input) {
-    document.querySelector('.show-password').onclick = (() => {
+    const showPassword = document.querySelector('.show-password');
+    showPassword.onclick = (() => {
         if (input.type === 'password') {
             input.type = 'text';
-            document.querySelector('.show-password').classList.add('hide-btn');
+            showPassword.classList.add('hide-btn');
         } else {
             input.type = 'password';
-            document.querySelector('.show-password').classList.remove('hide-btn');
+            showPassword.classList.remove('hide-btn');
         }
     })
 }

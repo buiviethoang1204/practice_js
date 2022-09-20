@@ -79,6 +79,13 @@
       "password": "Hoang120498@",
       "password_confirmation": "Hoang120498@",
       "id": 12
+    },
+    {
+      "fullname": "Bùi Việt Hoàng",
+      "email": "hoangbvfx06435@funix.edu.vn",
+      "password": "Hoang120498@",
+      "password_confirmation": "Hoang120498@",
+      "id": 13
     }
   ]
 }
