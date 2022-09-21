@@ -1,4 +1,6 @@
-*, html, body {
+*,
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,18 +32,18 @@
     flex-direction: column;
     margin-bottom: 16px;
 }
-.form-group .show-password {
-    position: absolute;
+.form-group .toggle-password, .form-group .toggle-password-confirmation {
+    float: right;
+    margin-left: 280px;
+    margin-top: -25px;
+    position: relative;
     cursor: pointer;
-    transform: translateY(200%) translateX(1600%);
 }
 .form-group input:valid ~ span {
     display: block;
 }
-.form-group span i.hide-btn::before{
-    content: "\f070";
-}
-.form-label, .form-message {
+.form-label,
+.form-message {
     text-align: left;
 }
 .form-label {
@@ -55,6 +57,7 @@
     border-color: #f33a58;
 }
 .error {
+    margin-top: 5px;
     font-size: 12px;
     padding: 4px 0 0;
     color: #f33a58;

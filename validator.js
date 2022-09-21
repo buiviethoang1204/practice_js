@@ -60,28 +60,22 @@ function Validator(options) {
                     validate(inputElement, rule);
                 }
                 inputElement.oninput = () => {
-                    const errorElement = inputElement.parentElement.querySelector(options.errorSelector);
-                    errorElement.innerText = '';
-                    errorElement.classList.remove('error');
+                    validate(inputElement, rule);
                 }
             }
         })
     }
 }
 
-function showPassword(input) {
-    const showPassword = document.querySelector('.show-password');
-    showPassword.onclick = (() => {
-        if (input.type === 'password') {
-            input.type = 'text';
-            showPassword.classList.add('hide-btn');
-        } else {
-            input.type = 'password';
-            showPassword.classList.remove('hide-btn');
-        }
+function showPassword(input, selector) {
+    selector.addEventListener('click', () => {
+        const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+        input.setAttribute('type', type);
+        selector.classList.toggle('bi-eye');
     })
 }
-showPassword(document.querySelector('#password'));
+showPassword(document.querySelector('#password'), document.querySelector('.toggle-password'));
+showPassword(document.querySelector('#password_confirmation'), document.querySelector('.toggle-password-confirmation'));
 
 Validator.isRequired = selector => {
     return {
