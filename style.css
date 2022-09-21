@@ -81,4 +81,5 @@ body {
 .disabled {
     pointer-events: none;
     cursor: not-allowed;
+    background-color: #a4bab8;
 }

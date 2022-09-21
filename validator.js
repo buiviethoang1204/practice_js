@@ -81,7 +81,7 @@ Validator.isRequired = selector => {
     return {
         selector: selector,
         test: value => {
-            return value.trim() ? undefined : 'Vui lòng nhập trường này'
+            return value.trim() ? undefined : 'Vui lòng nhập trường này';
         }
     }
 }
@@ -91,7 +91,7 @@ Validator.isEmail = selector => {
         selector: selector,
         test: value => {
             const regexEmail =
-                /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/;
             return regexEmail.test(value) ? undefined : 'Nhập đúng địa chỉ email';
         }
     }

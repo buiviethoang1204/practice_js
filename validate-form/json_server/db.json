@@ -100,6 +100,41 @@
       "password": "Hoang120498@",
       "password_confirmation": "Hoang120498@",
       "id": 15
+    },
+    {
+      "fullname": "a",
+      "email": "bui@gmail.com",
+      "password": "Hoang1204@",
+      "password_confirmation": "Hoang1204@",
+      "id": 16
+    },
+    {
+      "fullname": "a",
+      "email": "hoangbvfx06435@funix.edu.vn",
+      "password": "Hhoang1!",
+      "password_confirmation": "Hhoang1!",
+      "id": 17
+    },
+    {
+      "fullname": "a",
+      "email": "hoangbvfx06435@funix.edu.vn",
+      "password": "Hoang1204!",
+      "password_confirmation": "Hoang1204!",
+      "id": 18
+    },
+    {
+      "fullname": "Bùi Việt Hoàng",
+      "email": "hoangbvfx06435@funix.edu.vn",
+      "password": "Hoang199!",
+      "password_confirmation": "Hoang199!",
+      "id": 19
+    },
+    {
+      "fullname": "abcabc",
+      "email": "abc@gmail.com",
+      "password": "Hoang199!",
+      "password_confirmation": "Hoang199!",
+      "id": 20
     }
   ]
 }
