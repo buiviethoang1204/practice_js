@@ -47,6 +47,7 @@ function Validator(options) {
             } else {
                 console.log("Có lỗi");
             }
+            setTimeout(() => location.reload(true), 1000);
         }
         options.rules.forEach(rule => {
             if (!Array.isArray(selectorRules[rule.selector])) {
@@ -91,7 +92,7 @@ Validator.isEmail = selector => {
         selector: selector,
         test: value => {
             const regexEmail =
-            /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/;
+                /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/;
             return regexEmail.test(value) ? undefined : 'Nhập đúng địa chỉ email';
         }
     }
