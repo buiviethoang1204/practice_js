@@ -45,7 +45,7 @@
     </div>
     <script src="./validator.js"></script>
     <script>
-        const userApi = 'http://localhost:3000/user';
+        const userApi = 'https://632c3d495568d3cad8808c1a.mockapi.io/api/users';
         Validator({
             form: '#form',
             errorSelector: '.form-message',
@@ -56,9 +56,7 @@
                 Validator.isRequired('#password_confirmation'),
                 Validator.isEmail('#email'),
                 Validator.isPassword('#password'),
-                Validator.isConfirmed('#password_confirmation', () => {
-                    return document.querySelector('#password').value;
-                })
+                Validator.isConfirmed('#password_confirmation', '#password')
             ],
             onSubmit: data => {
                 const options = {

@@ -107,11 +107,11 @@ Validator.isPassword = selector => {
     }
 }
 
-Validator.isConfirmed = (selector, getConfirmValue) => {
+Validator.isConfirmed = (selector, getPassword) => {
     return {
         selector: selector,
         test: value => {
-            return value === getConfirmValue() ? undefined : 'Mật khẩu không trùng khớp';
+            return value === document.querySelector(getPassword).value ? undefined : 'Mật khẩu không trùng khớp';
         }
     }
 }
