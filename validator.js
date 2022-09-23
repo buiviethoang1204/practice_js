@@ -47,7 +47,7 @@ function Validator(options) {
             } else {
                 console.log("Có lỗi");
             }
-            setTimeout(() => location.reload(true), 700);
+            setTimeout(() => location.reload(true), 800);
         }
         options.rules.forEach(rule => {
             if (!Array.isArray(selectorRules[rule.selector])) {
